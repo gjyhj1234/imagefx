@@ -154,7 +154,7 @@ def compute_oral_score(exam: PeriodontalExam) -> OralScore:
         recs_cn.append("建议每6个月进行一次常规口腔检查。")
 
     score = max(0, min(100, score))
-    level, level_en, level_cn = "", "", ""
+    level_en, level_cn = "", ""
     for threshold, lbl_en, lbl_cn in _SCORE_LEVELS:
         if score >= threshold:
             level_en = lbl_en
